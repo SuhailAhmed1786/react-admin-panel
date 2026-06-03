@@ -19,7 +19,7 @@ const logoutController = require('../controllers').Logout;
 const deleteController = require('../controllers').Delete;
 const editController = require('../controllers').Edit;
 const searchController = require('../controllers').Search
-
+const profileController = require('../controllers').Profile
 
 app.get("/api/all-users", authMiddleware, isAdmin, (req, res) => {
   // only admin can access
@@ -31,3 +31,4 @@ router.post('/api/logout', authMiddleware, logoutController);
 router.delete('/api/delete/:id', authMiddleware, deleteController);
 router.put('/api/edit/:id', authMiddleware, editController);
 router.get('/api/search', searchController)
+router.put('/api/profile/:id', authMiddleware, profileController)

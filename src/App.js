@@ -1,10 +1,15 @@
-// import { useState, Profiler, useRef } from "react";
+import React, { useState, Profiler } from "react";
 import ReactDOM from "react-dom/client";
 import Navigation from "./components/navigation";
+import { UserProvider } from './components/context';
+import Dashboard from './components/Dashboard';
+import {MyContext} from './components/context'
 
-const App = () => {
+const App = (props) => {
   return (
-    <Navigation />
+    <MyContext.Provider value={{ data: 'John Doe' }}>
+      <Navigation />
+    </MyContext.Provider>
   );
 };
 

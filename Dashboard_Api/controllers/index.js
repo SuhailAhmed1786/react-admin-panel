@@ -6,6 +6,7 @@ const Logout = require('./LogoutController')
 const Delete = require('./DeleteController')
 const Edit = require('./EditController')
 const Search = require('./SearchController')
+const Profile = require('./ProfileController')
 module.exports = {
   Register,
   Login,
@@ -13,5 +14,6 @@ module.exports = {
   Logout,
   Delete,
   Edit,
-  Search
+  Search,
+  Profile
 };

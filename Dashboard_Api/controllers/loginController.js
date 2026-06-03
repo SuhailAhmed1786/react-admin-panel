@@ -10,7 +10,6 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
-
 module.exports = (req, res) => {
   const { email, password, role } = req.body;
   console.log("Login attempt:", email, password, role);

@@ -40,7 +40,6 @@ module.exports = async (req, res) => {
             console.log(err);
             return res.status(500).json({ message: "Database error" });
           }
-
           res.status(201).json({ 
             message: "User registered successfully",
             data: { username, email, phone, role: "user" }

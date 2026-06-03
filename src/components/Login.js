@@ -42,7 +42,7 @@ function Login() {
 				password: form_Data.pass,
 				role: userRole
 			}
-			console.log("datass", data)
+			console.log("logindata", data)
 			let res = await fetch(config.serverUrl + "login", {
 				method: "POST",
 				headers: {
